@@ -3,10 +3,10 @@ import Link from "next/link";
 export default function(){
     return(
         <>
-        <div>
+        <div className="p-4">
             <h1>Sign In</h1>
             <br />
-            <form>  
+            <form className="border-solid border-4 border-light-blue-500">  
                 <fieldset>
                     <br />
                 <label htmlFor="email">Email:</label> &nbsp;
