@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Footer from "../components/footer"
-import Header from "./dashboard.components/header"
+import Header from "./dashboard.components/Header"
 
 export default function ticketDashboard() {
 

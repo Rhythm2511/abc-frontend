@@ -1,4 +1,4 @@
-import Header from "./dashboard.components/header";
+import Header from "./dashboard.components/Header";
 
 
 export default function Profile(){

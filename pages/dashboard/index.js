@@ -1,9 +1,9 @@
 
-import Header from "./dashboard.components/header";
+import Header from "./dashboard.components/Header";
 
 export default function Dashboard(){
     const date = new Date();
-    console.log(date)
+    console.log(date);
     const hour = date.getHours();
     let message = "";
     if(hour>=6 && hour<12){

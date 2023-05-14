@@ -75,7 +75,7 @@ import { useForm } from 'react-hook-form';
 import axios from "axios"
 import { useState } from "react"
 import { useRouter } from 'next/router'
-import Header from './dashboard.components/header';
+import Header from './dashboard.components/Header';
 
 export default function AddTicket() {
     const router = useRouter();
