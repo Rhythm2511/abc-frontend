@@ -1,23 +1,25 @@
-import Link from "next/link"
+
+import Header from "./dashboard.components/header";
 
 export default function Dashboard(){
+    const date = new Date();
+    console.log(date)
+    const hour = date.getHours();
+    let message = "";
+    if(hour>=6 && hour<12){
+        message = "Good morning!! Manager."
+    } else if(hour>=12 && hour<16){
+        message = "Good afternoon!! Manager."
+    } else if(hour>=16 && hour<20){
+        message = "Good evening!! Manager."
+    } else{
+        message = "Good night!! Manager."
+    }
     return(
         <>
-        <div>
-            <h1>Dashboard</h1>
-            <nav>
-                <ul>
-                    <li><Link href = "/dashboard/profile">Profile</Link></li>
-                    <li><Link href = "/dashboard/settings">Settings</Link></li>
-                    <li><Link href = "/dashboard/orders">Orders</Link></li>
-                    <li><Link href = "/dashboard/ticket">Tickets</Link></li>
-                    <li><Link href = "/dashboard/customers">Customers</Link></li>                    
-                    <li><Link href = "/dashboard/ticketdashboard">TicketDashboard</Link></li>                    
-
-                </ul>
-            </nav>
-            <h3>Welcome to your dashboard!</h3>
-        </div>
+        <Header/>
+        <h1 className="text-3xl font-bold">{message}</h1>
+        <h3>Welcome to your dashboard!</h3>
         
         </>
     )
