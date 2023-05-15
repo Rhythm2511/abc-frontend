@@ -45,11 +45,17 @@ export default function SignUp(){
                 <input type="tel" name="phone" placeholder="Enter your phone number" /><br /> <br />
 
                 <label htmlFor="email">Email:</label> &nbsp;
-                <input type="email" id="email" name ="email" placeholder="Enter your email address"/><br /><br />
+                <input type="email" id="email" name ="email" placeholder="Enter your email address" required="" {...register('email', { required: true })}/>
+        
+                {errors.name && <p class="mt-2 text-xs text-red-600 dark:text-red-400"><span class="font-medium">Email is required</span></p>}
+                <br /><br />
            
                 <label htmlFor="password">Password:</label> &nbsp;
-                <input type="password" name ="password" placeholder="Enter your password"/><br /><br />  
+                <input type="password" name ="password" placeholder="Enter your password" required="" {...register('email', { required: true })}/><br /><br />  
 
+
+                {errors.name && <p class="mt-2 text-xs text-red-600 dark:text-red-400"><span class="font-medium">Password cannot be empty</span></p>}
+                <br /><br />
                 <button type="submit" className="bg-blue-500 text-white p-3 rounded-lg">Sign Up</button>
                 <br /><br />
                 </fieldset>

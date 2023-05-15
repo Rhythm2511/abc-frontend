@@ -1,4 +1,5 @@
 
+import Footer from "../components/footer";
 import Header from "./dashboard.components/Header";
 
 export default function Dashboard(){
@@ -20,7 +21,7 @@ export default function Dashboard(){
         <Header/>
         <h1 className="text-3xl font-bold">{message}</h1>
         <h3>Welcome to your dashboard!</h3>
-        
+        <Footer/>
         </>
     )
 }
