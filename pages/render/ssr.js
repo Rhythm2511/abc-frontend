@@ -20,7 +20,7 @@ export default function SSR({ data }) {
     
    export async function getServerSideProps() {
    
-        const response = await fetch('http://localhost:3000/ticket/findAll');
+        const response = await fetch('https://ticketing-system-production.up.railway.app/ticket/findAll');
         const data = await response.json();
       
     return { props: { data } }
